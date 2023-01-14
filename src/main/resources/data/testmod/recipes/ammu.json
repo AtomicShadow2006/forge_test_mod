@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "# #",
+    " E ",
+    "OOO"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:dirt"
+    },
+    "E": {
+      "item": "minecraft:emerald"
+    },
+    "O": {
+      "tag": "minecraft:wooden_pressure_plates"
+    }
+  },
+  "result": {
+    "item": "testmod:ammu"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "item.testmod.sha": "Sha",
+  "item.testmod.ammu": "Ammu",
+  "item.testmod.sul": "Sul",
+  "item.testmod.sadge": "Sadge",
+
+  "item.testmod.healing_wand": "Healing Wand",
+  "item.testmod.buff_wand": "Buff Wand",
+
+  "block.testmod.block_of_ammu": "Block of Ammu",
+  "block.testmod.block_of_sul": "Block of Sul",
+  "block.testmod.block_of_sha": "Block of Sha",
+
+  "block.testmod.sped_block": "Sped Block"
+}

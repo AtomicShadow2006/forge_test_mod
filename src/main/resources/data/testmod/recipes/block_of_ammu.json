@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "cookingtime": 25,
+  "experience": 999,
+  "ingredient": {
+    "item": "testmod:ammu"
+  },
+  "result": "testmod:block_of_ammu"
+}

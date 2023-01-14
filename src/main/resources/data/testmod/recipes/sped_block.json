@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "testmod:sadge"
+    }
+  },
+  "result": {
+    "item": "testmod:sped_block"
+  }
+}
