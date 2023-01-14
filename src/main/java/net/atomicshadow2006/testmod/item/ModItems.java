@@ -1,6 +1,8 @@
 package net.atomicshadow2006.testmod.item;
 
 import net.atomicshadow2006.testmod.TestMod;
+import net.atomicshadow2006.testmod.item.custom.BuffWandItem;
+import net.atomicshadow2006.testmod.item.custom.HealingWandItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -17,6 +19,14 @@ public class ModItems {
             () -> new Item(new Item.Properties().stacksTo(64)));
     public static final RegistryObject<Item> SUL = ITEMS.register("sul",
             () -> new Item(new Item.Properties().stacksTo(64)));
+    public static final RegistryObject<Item> SADGE = ITEMS.register("sadge",
+            () -> new Item(new Item.Properties().stacksTo(64)));
+
+
+    public static final RegistryObject<Item> HEALING_WAND = ITEMS.register("healing_wand",
+            () -> new HealingWandItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> BUFF_WAND = ITEMS.register("buff_wand",
+            () -> new BuffWandItem(new Item.Properties().stacksTo(1)));
 
 
 

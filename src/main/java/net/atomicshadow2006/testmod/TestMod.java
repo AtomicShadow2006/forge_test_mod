@@ -16,6 +16,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 
+import static net.atomicshadow2006.testmod.block.ModBlocks.*;
 import static net.atomicshadow2006.testmod.item.ModItems.*;
 
 
@@ -48,6 +49,15 @@ public class TestMod {
             event.accept(SHA);
             event.accept(AMMU);
             event.accept(SUL);
+            event.accept(SADGE);
+            event.accept(BLOCK_OF_AMMU);
+            event.accept(BLOCK_OF_SUL);
+            event.accept(BLOCK_OF_SHA);
+        }
+        if (event.getTab() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
+            event.accept(HEALING_WAND);
+            event.accept(BUFF_WAND);
+            event.accept(SPED_BLOCK);
         }
     }
 
