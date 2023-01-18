@@ -22,15 +22,16 @@ public class SpedBlock extends Block {
     @Override
     public InteractionResult use(BlockState state, Level level, BlockPos pos,
                                  Player player, InteractionHand hand, BlockHitResult result) {
-        player.addEffect(new MobEffectInstance(MobEffects.LEVITATION, 40, 25));
+        player.addEffect(new MobEffectInstance(MobEffects.LEVITATION, 20, 125));
         return super.use(state, level, pos, player, hand, result);
     }
 
     @Override
     public void stepOn(Level level, BlockPos pos, BlockState state, Entity entity) {
         if(entity instanceof LivingEntity livingEntity) {
-            livingEntity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 10, 5));
+            livingEntity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 10, 1));
         }
         super.stepOn(level, pos, state, entity);
     }
+
 }

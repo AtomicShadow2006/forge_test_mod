@@ -2,6 +2,7 @@ package net.atomicshadow2006.testmod.block;
 
 import net.atomicshadow2006.testmod.TestMod;
 import net.atomicshadow2006.testmod.block.custom.SpedBlock;
+import net.atomicshadow2006.testmod.block.custom.TrollLampBlock;
 import net.atomicshadow2006.testmod.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -32,7 +33,10 @@ public class ModBlocks {
 
 
     public static final RegistryObject<Block> SPED_BLOCK = registerBlock("sped_block",
-            () -> new SpedBlock(BlockBehaviour.Properties.of(Material.DIRT)));
+            () -> new SpedBlock(BlockBehaviour.Properties.of(Material.DIRT).friction(0.75f)));
+    public static final RegistryObject<Block> TROLL_LAMP = registerBlock("troll_lamp",
+            () -> new TrollLampBlock(BlockBehaviour.Properties.of(Material.BUILDABLE_GLASS)
+                    .lightLevel(state -> state.getValue(TrollLampBlock.LIT) ? 15 : 0)));
 
 
 

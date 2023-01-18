@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "lit=true": {"model": "testmod:block/troll_lamp_on"},
+    "lit=false": {"model": "testmod:block/troll_lamp_off"}
+  }
+}
