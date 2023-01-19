@@ -11,6 +11,9 @@
   "block.testmod.block_of_sul": "Block of Sul",
   "block.testmod.block_of_sha": "Block of Sha",
 
+  "item.testmod.corn": "Corn",
+  "block.testmod.corn_crop": "Corn Crop",
+
   "block.testmod.sped_block": "Sped Block",
 
   "block.testmod.troll_lamp": "Troll Lamp"

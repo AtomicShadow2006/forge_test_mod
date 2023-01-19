@@ -1,9 +1,12 @@
 package net.atomicshadow2006.testmod.item;
 
 import net.atomicshadow2006.testmod.TestMod;
+import net.atomicshadow2006.testmod.block.ModBlocks;
 import net.atomicshadow2006.testmod.item.custom.BuffWandItem;
 import net.atomicshadow2006.testmod.item.custom.HealingWandItem;
+import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -27,6 +30,11 @@ public class ModItems {
             () -> new HealingWandItem(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> BUFF_WAND = ITEMS.register("buff_wand",
             () -> new BuffWandItem(new Item.Properties().stacksTo(1)));
+
+    public static final RegistryObject<Item> CORN = ITEMS.register("corn",
+            () -> new ItemNameBlockItem(ModBlocks.CORN_CROP.get(), new Item.Properties().stacksTo(64)
+                    .food(new FoodProperties.Builder().nutrition(2).saturationMod(8f).build())));
+
 
 
 

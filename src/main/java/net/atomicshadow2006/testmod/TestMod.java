@@ -4,6 +4,8 @@ import com.mojang.logging.LogUtils;
 import net.atomicshadow2006.testmod.block.ModBlocks;
 import net.atomicshadow2006.testmod.item.ModItems;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -58,6 +60,10 @@ public class TestMod {
             event.accept(HEALING_WAND);
             event.accept(BUFF_WAND);
             event.accept(SPED_BLOCK);
+            event.accept(TROLL_LAMP);
+        }
+        if (event.getTab() == CreativeModeTabs.FOOD_AND_DRINKS) {
+            event.accept(CORN);
         }
     }
 
@@ -66,9 +72,10 @@ public class TestMod {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-            // Some client setup code
+            /* Some client setup code
             LOGGER.info("HELLO FROM CLIENT SETUP");
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
+            */
         }
     }
 }

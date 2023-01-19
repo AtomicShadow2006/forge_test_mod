@@ -1,6 +1,7 @@
 package net.atomicshadow2006.testmod.block;
 
 import net.atomicshadow2006.testmod.TestMod;
+import net.atomicshadow2006.testmod.block.custom.CornCropBlock;
 import net.atomicshadow2006.testmod.block.custom.SpedBlock;
 import net.atomicshadow2006.testmod.block.custom.TrollLampBlock;
 import net.atomicshadow2006.testmod.item.ModItems;
@@ -8,6 +9,7 @@ import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
@@ -33,11 +35,15 @@ public class ModBlocks {
 
 
     public static final RegistryObject<Block> SPED_BLOCK = registerBlock("sped_block",
-            () -> new SpedBlock(BlockBehaviour.Properties.of(Material.DIRT).friction(0.75f)));
+            () -> new SpedBlock(BlockBehaviour.Properties.of(Material.STONE).friction(0.25f)
+                    .requiresCorrectToolForDrops().strength(6f)));
     public static final RegistryObject<Block> TROLL_LAMP = registerBlock("troll_lamp",
-            () -> new TrollLampBlock(BlockBehaviour.Properties.of(Material.BUILDABLE_GLASS)
-                    .lightLevel(state -> state.getValue(TrollLampBlock.LIT) ? 15 : 0)));
+            () -> new TrollLampBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .lightLevel(state -> state.getValue(TrollLampBlock.LIT) ? 15 : 0)
+                    .requiresCorrectToolForDrops().strength(6f)));
 
+    public static final RegistryObject<Block> CORN_CROP = BLOCKS.register("corn_crop",
+            () -> new CornCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT)));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
